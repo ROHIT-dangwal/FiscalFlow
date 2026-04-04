@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--bg);
+  --color-sidebar: var(--sidebar);
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+}
+
+:root {
+  --bg: #FFFFFF;
+  --sidebar: #ede9e9;
+  --card: #ffffff;
+  --border: #ccc9c9;
+
+  --text-primary: #000000;
+  --text-secondary: #000000;
+
+  --primary: #ffffff;
+  --primary-hover: #ffffff;
+
+  --success: #22c99a;
+  --danger: #f0485a;
+  --warning: #f5a623;
+
+  --chart-1: #22c99a;
+  --chart-2: #f0485a;
+  --chart-3: #f5a623;
+  --chart-4: #6366f1;
+}
+
+.dark {
+  --bg: #07060f;
+  --sidebar:#15141f;
+  --card: #07060f;
+  --border: #8282ae;
+
+  --text-primary: #ffffff;
+  --text-secondary: #5a5a72;
+
+  --primary: rgb(51, 47, 66);
+  --primary-hover: #16132f;
+
+  --success: #22c99a;
+  --danger: #f0485a;
+  --warning: #f5a623;
+
+  --chart-1: #7b6ef6;
+  --chart-2: #5b4fcf;
+  --chart-3: #f5a623;
+  --chart-4: #22c99a;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
