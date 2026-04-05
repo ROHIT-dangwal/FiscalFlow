@@ -27,7 +27,7 @@
   --primary: #ffffff;
   --primary-hover: #ffffff;
 
-  --success: #22c99a;
+  --success: #26a341;
   --danger: #f0485a;
   --warning: #f5a623;
 
@@ -40,16 +40,16 @@
 .dark {
   --bg: #07060f;
   --sidebar:#15141f;
-  --card: #07060f;
+  --card: #000000;
   --border: #8282ae;
 
   --text-primary: #ffffff;
-  --text-secondary: #5a5a72;
+  --text-secondary: #9fa49f;
 
   --primary: rgb(51, 47, 66);
   --primary-hover: #16132f;
 
-  --success: #22c99a;
+  --success: #3d7623;
   --danger: #f0485a;
   --warning: #f5a623;
 

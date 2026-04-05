@@ -1,23 +1,25 @@
-import { Routes, Route } from "react-router-dom"
-import Navbar from "./components/Navbar/Navbar.jsx"
-import Dashboard from "./pages/Dashboard.jsx"
-import Transactions from "./pages/Transactions.jsx"
-import Insights from "./pages/Insights.jsx"
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import PageTransition from "./components/PageTransition.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Analytics from "./pages/Analytics.jsx";
+import Transactions from "./pages/Transactions.jsx"; 
 
 function App() {
-  return (
-    <div className="flex min-h-screen">
-      <Navbar />
+  const location = useLocation();
 
-      <div className="flex-1">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/insights" element={<Insights />} />
+  return (
+    <Navbar>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Dashboard /></PageTransition>} />
+          <Route path="/analytics" element={<PageTransition><Analytics /></PageTransition>} />
+          <Route path="/transactions" element={<PageTransition><Transactions /></PageTransition>} />
         </Routes>
-      </div>
-    </div>
-  )
+      </AnimatePresence>
+    </Navbar>
+  );
 }
 
-export default App
+export default App;
