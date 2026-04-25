@@ -15,7 +15,24 @@ app.use(express.json());
 const upload = multer({ dest: "uploads/" });
 
 // firebase setup
-const serviceAccount = require("./firebase-service-account.json");
+let serviceAccount;
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  try {
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+  } catch (err) {
+    console.error(
+      "CRITICAL: Failed to parse FIREBASE_SERVICE_ACCOUNT. Check Render dashboard.",
+    );
+    process.exit(1);
+  }
+} else {
+  try {
+    serviceAccount = require("./firebase-service-account.json");
+  } catch (err) {
+    console.error("CRITICAL: Missing Firebase credentials.");
+    process.exit(1);
+  }
+}
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
