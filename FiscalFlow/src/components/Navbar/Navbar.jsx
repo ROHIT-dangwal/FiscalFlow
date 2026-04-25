@@ -115,13 +115,16 @@ function Navbar({ children }) {
     try {
       const token = await user.getIdToken();
 
-      const response = await fetch("http://localhost:5000/api/upload", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await fetch(
+        "https://fiscalflow-backend-avho.onrender.com/api/upload",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          body: formData,
         },
-        body: formData,
-      });
+      );
 
       if (response.ok) {
         alert("Data successfully uploaded and saved to database!");

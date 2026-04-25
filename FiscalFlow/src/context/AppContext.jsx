@@ -34,10 +34,13 @@ export const AppProvider = ({ children }) => {
           const token = await currentUser.getIdToken();
 
           // sync the user with our Postgres Database
-          await fetch("http://localhost:5000/api/sync-user", {
-            method: "POST",
-            headers: { Authorization: `Bearer ${token}` },
-          });
+          await fetch(
+            "https://fiscalflow-backend-avho.onrender.com/api/sync-user",
+            {
+              method: "POST",
+              headers: { Authorization: `Bearer ${token}` },
+            },
+          );
 
           fetchTransactions(currentUser);
         } catch (error) {
@@ -58,11 +61,14 @@ export const AppProvider = ({ children }) => {
     try {
       const token = await currentUser.getIdToken();
 
-      const response = await fetch("http://localhost:5000/api/transactions", {
-        headers: {
-          Authorization: `Bearer ${token}`,
+      const response = await fetch(
+        "https://fiscalflow-backend-avho.onrender.com/api/transactions",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
-      });
+      );
 
       if (!response.ok) {
         console.log("Not logged in yet, using mock data.");
@@ -120,14 +126,17 @@ export const AppProvider = ({ children }) => {
 
     try {
       const token = await user.getIdToken();
-      const response = await fetch("http://localhost:5000/api/transactions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const response = await fetch(
+        "https://fiscalflow-backend-avho.onrender.com/api/transactions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(txn),
         },
-        body: JSON.stringify(txn),
-      });
+      );
 
       if (response.ok) {
         const newTxn = await response.json();
@@ -150,7 +159,7 @@ export const AppProvider = ({ children }) => {
     try {
       const token = await user.getIdToken();
       const response = await fetch(
-        `http://localhost:5000/api/transactions/${id}`,
+        `https://fiscalflow-backend-avho.onrender.com/api/transactions/${id}`,
         {
           method: "DELETE",
           headers: {
