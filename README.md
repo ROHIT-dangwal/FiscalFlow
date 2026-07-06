@@ -105,6 +105,9 @@ src/
 * [GitHub](https://github.com/rohit-dangwal)
 * [LinkedIn](www.linkedin.com/in/rohit-dangwal)
 
+**Manan Kasturia**
+* [GitHub](https://github.com/manankasturia)
+* [LinkedIn](https://www.linkedin.com/in/manankasturia)
 ---
 
 ### 📝 License
