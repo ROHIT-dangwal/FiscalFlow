@@ -106,7 +106,7 @@ src/
 * [LinkedIn](www.linkedin.com/in/rohit-dangwal)
 
 **Manan Kasturia**
-* [GitHub}(https://github.com/manankasturia)
+* [GitHub](https://github.com/manankasturia)
 * [LinkedIn](https://www.linkedin.com/in/manankasturia)
 ---
 
