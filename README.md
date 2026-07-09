@@ -102,8 +102,8 @@ src/
 
 ### 👤 Author
 **Rohit Dangwal**
-* [GitHub]([https://github.com/rohit-dangwal)](https://github.com/ROHIT-dangwal/)
-* [LinkedIn](www.linkedin.com/in/rohit-dangwal)
+* [GitHub](https://github.com/ROHIT-dangwal)
+* [LinkedIn](https://www.linkedin.com/in/rohit-dangwal)
 
 **Manan Kasturia**
 * [GitHub](https://github.com/manankasturia)
