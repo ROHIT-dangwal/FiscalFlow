@@ -224,8 +224,8 @@ FiscalFlow-Backend/          # Backend
 
 ## 👤 Authors
 **Rohit Dangwal**
-- [GitHub](https://github.com/rohit-dangwal)
-- [LinkedIn](https://www.linkedin.com/in/rohit-dangwal)
+* [GitHub](https://github.com/ROHIT-dangwal)
+* [LinkedIn](https://www.linkedin.com/in/rohit-dangwal)
 
 **Manan Kasturia**
 - [GitHub](https://github.com/manankasturia)
